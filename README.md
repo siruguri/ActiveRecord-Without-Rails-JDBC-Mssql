@@ -16,7 +16,7 @@ What you can do
 
 Just a simple example of using ActiveRecord migrations without Rails
 
-1. run rake tasks:
+### run rake tasks:
 
 * `rake db:create`
 * `rake db:migrate`
@@ -25,7 +25,7 @@ Just a simple example of using ActiveRecord migrations without Rails
 * `rake db:version`
 
 
-2. Or, you can run the thing to show that it'll connect
+### Or, you can run the thing to show that it'll connect
 
 ```
 ruby ar-no-rails
@@ -34,7 +34,7 @@ ruby ar-no-rails
 Output:
 > Count of Pages: 0
 
-3. Lastly, you can IRB it to do stuff:
+### Lastly, you can IRB it to do stuff:
 
 $ irb
 
