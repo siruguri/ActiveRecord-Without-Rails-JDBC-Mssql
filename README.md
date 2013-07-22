@@ -10,9 +10,13 @@ Configured for JRuby, JDBC, and Microsoft MSSQL server
 
 ---
 
+
+What you can do
+---------------
+
 Just a simple example of using ActiveRecord migrations without Rails
 
-tasks you can do:
+1. run rake tasks:
 
 * `rake db:create`
 * `rake db:migrate`
@@ -21,7 +25,7 @@ tasks you can do:
 * `rake db:version`
 
 
-Or, you can run the thing to show that it'll connect
+2. Or, you can run the thing to show that it'll connect
 
 ```
 ruby ar-no-rails
@@ -30,7 +34,7 @@ ruby ar-no-rails
 Output:
 > Count of Pages: 0
 
-Lastly, you can IRB it to do stuff:
+3. Lastly, you can IRB it to do stuff:
 
 $ irb
 
@@ -43,6 +47,8 @@ $ irb
 => #<Page id: 1, content: "the-content", published: false>
 ```
 
-Copyright
----------
-None. Really.
+Pre-requisites
+--------------
+* Java
+* JRuby
+
