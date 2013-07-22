@@ -1,5 +1,14 @@
-ActiveRecord Without Rails
-==========================
+ActiveRecord Without Rails, JDBC-Mssql style
+============================================
+
+This is a mashup of:
+
+* https://github.com/jwo/ActiveRecord-Without-Rails
+* http://exposinggotchas.blogspot.jp/2011/02/activerecord-migrations-without-rails.html  
+
+Configured for JRuby, JDBC, and Microsoft MSSQL server
+
+---
 
 Just a simple example of using ActiveRecord migrations without Rails
 
@@ -8,6 +17,9 @@ tasks you can do:
 * `rake db:create`
 * `rake db:migrate`
 * `rake db:drop`
+* `rake db:rollback`
+* `rake db:version`
+
 
 Or, you can run the thing to show that it'll connect
 
