@@ -42,7 +42,7 @@ namespace :db do
   end
 
   task :configuration => :environment do
-    @config = YAML.load_file('config/databases.yml')[DATABASE_ENV]
+    @config = YAML.load_file('config/database.yml')[DATABASE_ENV]
   end
 
   task :configure_connection => :configuration do
