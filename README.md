@@ -51,6 +51,11 @@ Pre-requisites
 --------------
 * Java
 * JRuby
+* A Mssql database server
+
+Note: This project is configured for  Rails 3.2.13, because I have to use Java 6 in my current environment. 
+Rails 4.0 would force an upgrade of the jdbc drivers, which require Java 7. 
+
 
 Usage
 -----
@@ -75,4 +80,11 @@ If you define a `production` environment in the config/database.yml, you can use
 (this is different from the RAILS_ENV you will see in a lot of Active Record migration documentation because... well, we are not using rails here.)
 
 
+Alternatives
+------------
+
+I haven't checked this out yet, but there is a standalone-migrations gem:
+
+* http://gabrito.com/post/standalone-migrations-using-rails-migrations-in-non-rails-projects
+* https://github.com/thuss/standalone-migrations
 
