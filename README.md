@@ -52,3 +52,27 @@ Pre-requisites
 * Java
 * JRuby
 
+Usage
+-----
+
+### Getting Started
+
+1. Download the zip file (or git clone)
+2. Unzip the archive.
+3. rename folder to your project name: `mv ActiveRecord-Without-Rails-JDBC-Mssql myproj`
+4. `cd myproj`
+5. `bundle install`  # make sure you have the gems necessary.
+6. configure the database in config/database.yml
+7. `rake db:version` # check to see that the db config is correct.
+8. `rake --tasks` make sure everything is working okay
+
+### config/database.yml
+
+The database.yml is set up to allow for different environments.
+By default it has one environment, `development` defined.
+
+If you define a `production` environment in the config/database.yml, you can use `DATABASE_ENV=production rake db:version` to run against the production environment.
+(this is different from the RAILS_ENV you will see in a lot of Active Record migration documentation because... well, we are not using rails here.)
+
+
+
