@@ -1,2 +1,2 @@
 db/migrate/private/*
-db/*
+db/*sqlite
