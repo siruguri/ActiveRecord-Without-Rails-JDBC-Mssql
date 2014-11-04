@@ -39,7 +39,8 @@ namespace :db do
       else
         # We rescued all Exceptions so throw the rest of them.
         # raise with no parameters reraises the exception in $!
-        raise 
+        raise
+      end
     end
   end
  
