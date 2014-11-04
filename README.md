@@ -69,9 +69,7 @@ Usage
 2. Unzip the archive.
 3. rename folder to your project name: `mv ActiveRecord-Without-Rails-JDBC-Mssql myproj`
 4. `cd myproj`
-5. `bundle install`  # make sure you have the gems necessary.
-   1. `bundle install --without unix` to use JRuby/JDBC/MSSQL
-   1. `bundle install --without windows` to use MRI and a UNIX database. SQLite3 is used by default; to use Postgres, change the corresponding gem used in the Gemfile.
+5. `bundle install`
 6. configure the database in config/database.yml
 7. `rake db:version` # check to see that the db config is correct.
 8. `rake --tasks` make sure everything is working okay

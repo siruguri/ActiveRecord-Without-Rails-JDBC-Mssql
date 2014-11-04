@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Accommodate different AR versions - 3.2 for Windows, and 4.1 for *nix
+# Accommodate different AR versions - 3.2 for Windows/Java 6, and 4.1 for *nix
 gem "activerecord", ">=3.2.13", "<=4.1"
 
 # Use this set of gems for MS SQL

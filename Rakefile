@@ -36,7 +36,10 @@ namespace :db do
           $stderr.puts "Couldn't create database for #{config.inspect}, charset: utf8, collation: utf8_unicode_ci"
           $stderr.puts "(if you set the charset manually, make sure you have a matching collation)" if config['charset']
         end
-      end
+      else
+        # We rescued all Exceptions so throw the rest of them.
+        # raise with no parameters reraises the exception in $!
+        raise 
     end
   end
  
