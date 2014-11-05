@@ -62,7 +62,14 @@ namespace :db do
 
   desc 'Drops the database for the current DATABASE_ENV'
   task :drop => :configure_connection do
-    ActiveRecord::Base.connection.drop_database @config['database']
+    if ActiveRecord::Base.connection.is_a? ActiveRecord::ConnectionAdapters::SQLite3Adapter
+      ActiveRecord::Base.connection.disconnect!
+      File.unlink @config['database']
+      Rake::Task['db:configure_connection'].reenable
+      Rake::Task["db:configure_connection"].invoke
+    else
+      ActiveRecord::Base.connection.drop_database @config['database']
+    end
   end
 
   desc 'Migrate the database (options: VERSION=x, VERBOSE=false).'
@@ -81,4 +88,8 @@ namespace :db do
   task :version => :configure_connection do
     puts "Current version: #{ActiveRecord::Migrator.current_version}"
   end
+
+  desc "Reset the database - drop it, re-run migrations"
+  task :reset => [:drop, :migrate]
+
 end
